@@ -21,7 +21,7 @@ repositories {
 ```groovy
 dependencies {
 	// ...
-	compile 'com.github.acontenti:RadioBar:1.0'
+	compile 'com.github.acontenti:RadioBar:1.1'
 }
 ```
 ##Copyright
