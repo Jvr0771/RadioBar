@@ -103,7 +103,7 @@ public class RadioBar extends RadioGroup {
 	 *
 	 * @param id the unique id of the radio button to select in this group
 	 *
-	 * @see #getCheckedRadioImageViewId()
+	 * @see #getSelectedRadioImageViewId()
 	 * @see #clearCheck()
 	 */
 	public void check(int id) {
@@ -153,17 +153,17 @@ public class RadioBar extends RadioGroup {
 	 *
 	 * @attr ref android.R.styleable#RadioGroup_checkedButton
 	 */
-	public int getCheckedRadioImageViewId() {
+	public int getSelectedRadioImageViewId() {
 		return mCheckedId;
 	}
 
 	/**
 	 * <p>Clears the selection. When the selection is cleared, no radio button
-	 * in this group is selected and {@link #getCheckedRadioImageViewId()} returns
+	 * in this group is selected and {@link #getSelectedRadioImageViewId()} returns
 	 * null.</p>
 	 *
 	 * @see #check(int)
-	 * @see #getCheckedRadioImageViewId()
+	 * @see #getSelectedRadioImageViewId()
 	 */
 	public void clearCheck() {
 		check(-1);
@@ -181,8 +181,14 @@ public class RadioBar extends RadioGroup {
 
 	@Deprecated
 	@Override
-	public void setOnCheckedChangeListener(OnCheckedChangeListener listener) throws RuntimeException{
+	public void setOnCheckedChangeListener(OnCheckedChangeListener listener) {
 		throw new RuntimeException("Use setOnSelectedItemChangeListener instead!");
+	}
+
+	@Deprecated
+	@Override
+	public int getCheckedRadioButtonId() {
+		throw new RuntimeException("Use getSelectedRadioImageViewId instead!");
 	}
 
 	/**
