@@ -24,6 +24,46 @@ dependencies {
 	compile 'com.github.acontenti:RadioBar:1.1'
 }
 ```
+###Example code
+XML layout example
+```xml
+<it.psas.radiobar.RadioBar
+	android:id="@+id/radioBarId"
+	android:layout_width="wrap_content"
+	android:layout_height="match_parent"
+	app:orientation="horizontal">
+
+	<it.psas.radiobar.RadioImageView
+		android:id="@+id/radioBar1_element1"
+		android:layout_width="48dp"
+		android:layout_height="48dp"
+		app:srcOn="@drawable/ic_action_example_1"
+		app:srcOff="@drawable/ic_action_example_1_off"/>
+
+	<it.psas.radiobar.RadioImageView
+		android:id="@+id/radioBar1_element2"
+		android:layout_width="48dp"
+		android:layout_height="48dp"
+		app:srcOn="@drawable/ic_action_example_2"
+		app:srcOff="@drawable/ic_action_example_1_off"/>
+
+</it.psas.radiobar.RadioBar>
+```
+Java implementation
+```java
+RadioBar mRadioBar = (RadioBar) findViewById(R.id.radioBar1);
+mRadioBar.setOnSelectedItemChangeListener(new RadioBar.OnSelectedItemChangeListener() {
+	@Override
+	public void onSelectedItemChange(RadioBar radioBar, int id, int position) {
+		mSelectedRadioImageViewOldPosition = mSelectedRadioImageViewPosition;
+		mSelectedRadioImageViewPosition = position;
+		RadioImageView mSelectedRadioImageView = (RadioImageView) findViewById(id);
+		
+	}
+});
+int mSelectedRadioImageViewId = mRadioBar.getSelectedRadioImageViewId();
+RadioImageView mSelectedRadioImageView = (RadioImageView) findViewById(mSelectedRadioImageViewId);
+```
 ##Copyright
 Copyright &copy; 2015, Alessandro Contenti.
 
