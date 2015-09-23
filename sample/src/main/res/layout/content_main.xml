@@ -13,34 +13,35 @@
 	<it.psas.radiobar.RadioBar
 		android:id="@+id/radioBar1"
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_gravity="center_horizontal"
 		app:orientation="horizontal">
 
 		<it.psas.radiobar.RadioImageView
 			android:id="@+id/radioBar1_el1"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
 			app:srcOn="@drawable/ic_action_ex1"
 			app:srcOff="@drawable/ic_action_ex1_off"/>
 
 		<it.psas.radiobar.RadioImageView
 			android:id="@+id/radioBar1_el2"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
 			app:srcOn="@drawable/ic_action_ex2"
 			app:srcOff="@drawable/ic_action_ex2_off"/>
 
 		<it.psas.radiobar.RadioImageView
 			android:id="@+id/radioBar1_e3"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
 			app:srcOn="@drawable/ic_action_ex3"
 			app:srcOff="@drawable/ic_action_ex3_off"/>
 
 		<it.psas.radiobar.RadioImageView
 			android:id="@+id/radioBar1_el4"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
 			app:srcOn="@drawable/ic_action_ex4"
 			app:srcOff="@drawable/ic_action_ex4_off"/>
 
